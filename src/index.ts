@@ -19,7 +19,20 @@ const jwtSecret = "default"; // TokenUtils.generateJWTAsync();
 // SSO Authentications
 const oAuthParamsArray: T.OAuthParams[] = [];
 
-const endpoints: T.Endpoint[] = [];
+// hello world endpoint
+const helloWorldBlock: T.BlockWrap = {
+  codeSnippet: { ts: `() => ({hello:'hello world'})` },
+};
+
+const helloWorld: T.Endpoint = {
+  path: "/a",
+  method: "GET",
+  blocks: [helloWorldBlock],
+  tag: "Hello",
+};
+// helo world endpoint
+
+const endpoints: T.Endpoint[] = [helloWorld];
 
 // this is only relevant is the wasm has changed AND if there is a wasm at all!
 Deploy.sendBackendAssets("./dist/app", token).then(console.log);
