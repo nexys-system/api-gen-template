@@ -2,10 +2,13 @@ import { Deploy, Types as T } from "@nexys/api-gen";
 
 const token = "";
 
+const env = T.Env.dev;
+
 const info: T.Info = {
   title: "Name API ",
   description: "xxx API specifications",
   version: "1.0",
+  env
 };
 
 // this is to generate public and private key for the JWT
