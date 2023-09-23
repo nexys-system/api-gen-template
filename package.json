@@ -1,0 +1,15 @@
+{
+  "license": "MIT",
+  "scripts": {
+    "copy:wasm": "find ./src -name \"*.wasm\" | while read wasmfile; do target=\"dist/${wasmfile#./src/}\"; mkdir -p $(dirname \"$target\"); cp \"$wasmfile\" \"$target\"; done",
+    "build": "tsc && yarn copy:wasm",
+    "deployApi": "yarn build && node ./dist/index.js"
+  },
+  "dependencies": {
+    "@nexys/api-gen": "^0.0.7"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  },
+  "version": "0.0.1"
+}

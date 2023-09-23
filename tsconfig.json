@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+      "target": "ES2018",
+      "module": "commonjs",
+      "outDir": "./dist",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "lib":["ES2015", "DOM"],"allowJs": true
+  },
+  "include": [
+      "src/**/*"
+  ],
+  "exclude": [
+      "node_modules"
+  ]  
+}
+
+
+
+
+
+
+
