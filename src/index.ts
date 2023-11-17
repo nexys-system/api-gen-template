@@ -39,6 +39,6 @@ Deploy.sendBackendAssets("./dist/app", token).then(console.log);
 
 // do not touch the code below this line
 Deploy.deployApi(
-  { info, token, jwtSecret, endpoints, oAuthParamsArray },
+  { info, jwtSecret, endpoints, oAuthParamsArray },
   token
 ).then(console.log);
